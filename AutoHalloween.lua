@@ -1,3 +1,5 @@
+
+
 voidPos = Vector3.new(0, -1409, 0)
 
 
@@ -607,11 +609,16 @@ end
 
 -- Main loop function
 local function startLoop()
-    while isRunning do
-        AutoGhostFly()
-        wait(0.3)
-        AutoTrickOrTreat()
-        wait(0.3)
+    local Players = game:GetService("Players")
+    local player = Players.LocalPlayer
+    local playerName = player.Name
+    if playerName == 'xiehank9' then
+        while isRunning do
+            AutoGhostFly()
+            wait(0.3)
+            AutoTrickOrTreat()
+            wait(0.3)
+        end
     end
 end
 
